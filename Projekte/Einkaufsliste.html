@@ -1,0 +1,82 @@
+<html>
+
+<head>
+
+	<meta charset="UTF-8">
+	<title>Einkaufsliste</title>
+
+	
+<script>
+
+	var liste = ["Banane","Apfel","Rakija","Whiskey","Rum","Cola","Birne"] ;
+	
+	function hinzufuegen() {
+		var eingabe = document.getElementById("eingabe").value	
+		liste[liste.length] = eingabe;
+		ausgabe() ;
+		
+	}
+	
+	function ausgabe() {
+	
+		var ausgabeText = "Deine Liste beinhaltet : <br>" ;
+		
+		for(var i = 0 ; i < liste.length ; i++) {
+		ausgabeText += i+1 + ". " + liste[i] + "<br>" ;
+		}
+		
+		document.getElementById("ausgabe").innerHTML = ausgabeText ;
+	
+	}
+	
+	function sortieren() {
+		
+		liste.sort() ;
+		ausgabe() ;
+		}
+	
+	function selectionSort() {
+	
+		for(var i = 0 ; i < liste.length ; i++) {
+	
+		var min = i ;
+		
+		for(var j = i+1 ; j < liste.length ; j++) {
+			if(liste[j] < liste[min]){
+				min = j ;
+					}
+				}
+			vertausche (i , min) ;
+			}
+		ausgabe() ;	
+		}
+	
+	
+	
+	function vertausche(p , k) {
+	
+		var hilfe = liste[p] ;
+		liste[p] = liste[k] ;
+		liste[k] = hilfe ;
+	}
+
+</script>
+
+
+
+
+</head>
+
+<body>
+
+
+
+	<input type="text" id="eingabe"><br>
+	<input type="button" value="hinzufügen" onclick="hinzufuegen()">
+	<input type="button" value="sortieren" onclick="sortieren()">
+	<input type="button" value="selectionsort" onclick="selectionSort()">
+	<input type="button" value="bubblesort" onclick="">
+	<p id="ausgabe">noch nichts auf der Liste</p>
+</body>
+
+</html>

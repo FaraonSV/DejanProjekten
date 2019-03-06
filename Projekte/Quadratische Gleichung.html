@@ -1,0 +1,70 @@
+<html>
+<head>
+
+	<meta charset="UTF-8">
+	
+<script>
+	
+	function berechne() {
+	
+	var ausgabeText = "" ; 
+	var q = parseInt (document.getElementById("q").value) ;
+	var p = parseInt (document.getElementById("p").value) ;
+	
+	
+	var diskriminante = (p/2)*(p/2) - q ;
+	var ausgabe = "Die antwort ist "  +  diskriminante   ;
+	
+	
+	if (diskriminante > 0 ) {
+			
+	alert("Diskriminante ist größer 0") ;
+	var x1 = -(p/2) + Math.sqrt (diskriminante) ;
+	var x2 = -(p/2) - Math.sqrt (diskriminante) ;
+	ausgabeText = "x1=" + x1 + "x2 =" + x2 ; 
+	
+	}
+	
+	if (diskriminante < 0 ) {
+		ausgabeText = "Es gibt keine Lösung" 
+		
+	alert("Diskriminante ist kleiner 0")
+	}
+	
+	if (diskriminante == 0 ) {
+	var loesung = -p/2 ;
+	alert("Diskriminante ist gleich 0" )
+	ausgabeText = "Das Ergebnis ist " + loesung ;
+	
+	}
+		document.getElementById("loesung").innerHTML = ausgabeText ;
+	
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+</script>
+
+
+
+</head>
+<body>
+
+	<h1>Kleine Lösunghsformel für quadratische Gleichungen</h1>
+	
+	x² + <input type="text" id="p" style="witdh: 30">x + 
+	<input type="text" id="q" style="width:30"> = 0 
+	<br><br>
+	<input type="button" value="Berechne die Lösung" onclick="berechne()">
+	<p id="loesung">Die Lösung ist ... </p>
+	
+	
+
+</body>
+</html> 
+

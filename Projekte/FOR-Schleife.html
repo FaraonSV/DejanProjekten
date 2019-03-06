@@ -1,0 +1,43 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Übung FOR</title>
+	
+<script>
+
+	function zufallszahl() {
+	
+	var anzahlKleiner = 0 ;
+	var anzahlGroesser = 0 ;
+	
+	for ( var i = 0 ; i < 20 ; i = i + 1 ) {
+	var zz = Math.random()*10 +0.5 ;
+	if( zz <= 5 ) {
+		anzahlKleiner++ ; 
+	}
+	
+	else {
+		anzahlGroesser++;
+	}
+}
+	var ausgabeText = "Anzahl kleiner 5 :" + anzahlKleiner + "<br>" ;
+	ausgabeText += "Anzahl größer 5:" +anzahlGroesser ;
+	
+	document.getElementById("ausgabe").innerHTML = ausgabeText ;
+
+}
+
+</script>
+	
+</head>
+
+<body>
+
+	<h1>Übung FOR </h1>
+	<input type="button" value="Jetzt Üben" onclick="zufallszahl()">
+	<p id="ausgabe"></p>
+
+</body>
+
+</html>

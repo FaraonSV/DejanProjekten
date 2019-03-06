@@ -1,0 +1,53 @@
+<html>
+
+<head>
+
+	<meta charset="UTF-8">
+	<title>Lineare Funktion</title>
+	
+	<script>
+	
+		function eigenschaften() {
+			
+			var k = parseInt (document.getElementById("k").value) ;
+			var d = parseInt (document.getElementById("d").value) ; 
+			
+			if ( k > 0 ) {
+			document.getElementById("Eigenschaft k").innerHTML = "Die Funktion ist steigend" 
+			}
+			if ( k < 0 ) {
+			document.getElementById("Eigenschaft k").innerHTML = "Die Funktion ist fallend"
+			}
+			if ( k == 0 ) { //Vergleichsoperator == 
+			document.getElementById("Eigenschaft k").innerHTML = "Die Funktion ist konstant"
+			}
+			
+			if ( d > 0 ) {
+			document.getElementById("Eigenschaft d").innerHTML = "Die Funktion schneidet die y-Achse im positiven y-Bereich"
+			}
+			if ( d < 0 ) {
+			document.getElementById("Eigenschaft d").innerHTML = "Die Funktion schneidet die y-Achse im negativen y-Bereich"
+			}
+			if ( d == 0 ) {
+			document.getElementById("Eigenschaft d").innerHTML = "Die Funktion geht durch den Punkt (0|0)"
+			}
+		
+		}
+	</script>
+	
+	
+</head>
+
+<body>
+
+	<h1>Funktionsgleichung</h1>
+	
+	y=<input type="text" id="k" style="width: 50px">x + <input type="text" id="d" style="width: 50px">
+		<input type="button" value="Eigenschaften" onclick="eigenschaften()">
+	
+	<p id="Eigenschaft k"></p>
+	<p id="Eigenschaft d"></p>
+
+</body>
+
+</html>

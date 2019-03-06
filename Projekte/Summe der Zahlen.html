@@ -1,0 +1,38 @@
+<html>
+
+<head>
+
+	<meta charset="UTF-8">
+	<title>Freier Fall </title>
+	
+
+	
+</head>
+
+<body>
+
+	<table border= "1px">
+	
+	<tr><th>Höhe (m)</th><th>Zeit (s)</tr></th></td>
+	
+
+<script>
+
+	for( h = 2 ; h <= 100 ; h +=  2) {
+	var t = Math.sqrt(2*h/9.81) ;
+	t = Math.round(t*100)/100; 
+	
+	document.write("<tr>") ;
+		document.write("<td>" + h + "</td>") ;
+		document.write("<td>" + t + "</td>") ;
+		document.write("</tr>") ; 
+	
+	}
+
+</script>
+
+	</table>
+	
+</body>
+
+</html>

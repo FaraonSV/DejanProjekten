@@ -1,0 +1,50 @@
+<html>
+
+<head>
+
+	<meta charset="UTF-8">
+	<title>SelectionSort</title>
+	
+<script>
+
+	document.write("<h1>SelectionSort</h1>") ;
+	
+	var zahlen = [ 10 , 5, 4 , 11 , 1 ] ;
+	
+	document.write(zahlen + "<br>") ; 
+
+	for(var i = 0 ; i < zahlen.length ; i++) {
+	
+	var min = i ;
+	for( var j = min ; j < zahlen.length ; j++ ) {
+		
+	if( zahlen[min] > zahlen[j] ) {
+		min = j ;
+	} 
+	
+	}
+	document.write (i + " Durchgang: min = " + min + "<br>") ;
+}
+
+	var hilfe = zahlen[min] ;
+	zahlen[min] = zahlen[0] ;
+	zahlen[0] = hilfe ;
+
+	document.write(zahlen) ; 
+
+
+
+
+
+
+
+
+</script>
+	
+</head>
+
+<body>
+
+</body>
+
+</html>

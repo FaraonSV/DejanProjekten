@@ -1,0 +1,61 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Funktionen</title>
+ 
+ <script>
+ 
+	function addition() {
+	 var wert1 = document.getElementById("eingabe1").value ;
+	 wert1 = parseInt(wert1);
+	 var wert2 = document.getElementById("eingabe2").value ;
+	 wert2 = parseInt(wert2) ;
+	 var ergebnis = wert1 + wert2 ;
+	 document.getElementById("ausgabe").innerHTML = ergebnis ;
+	 }
+	 
+	 function subtraktion() {
+	 var wert1=document.getElementById("eingabe1").value ;
+	 wert1 = parseInt(wert1) ;
+	 var wert2 = document.getElementById("eingabe2").value ;
+	 wert2 = parseInt(wert2) ;
+	 var ergebnis = wert1 - wert2 ;
+	 document.getElementById("ausgabe").innerHTML = ergebnis ;
+	 }
+	 
+	  function multiplikation() {
+	 var wert1=document.getElementById("eingabe1").value ;
+	 wert1 = parseInt(wert1) ;
+	 var wert2 = document.getElementById("eingabe2").value ;
+	 wert2 = parseInt(wert2) ;
+	 var ergebnis = wert1 * wert2 ;
+	 document.getElementById("ausgabe").innerHTML = ergebnis ;
+	 }
+	 
+	 function division() {
+	 var wert1=document.getElementById("eingabe1").value ;
+	 wert1 = parseInt(wert1) ;
+	 var wert2 = document.getElementById("eingabe2").value ;
+	 wert2 = parseInt(wert2) ;
+	 var ergebnis = wert1 / wert2 ;
+	 document.getElementById("ausgabe").innerHTML = ergebnis ;
+	}
+ 
+ </script>
+
+</head>
+
+<body>
+
+	<input type="text" id="eingabe1">
+	<input type="text" id="eingabe2"><br>
+	<input type="button" value="+" onclick="addition()"><br>
+	<input type="button" value="-" onclick="subtraktion()"><br>
+	<input type="button" value="*" onclick="multiplikation()"><br>
+	<input type="button" value="/" onclick="division()"><br>
+	<p id="ausgabe">Hier kommt die Ausgabe . . . </p>
+	
+</body>
+
+</html>
